@@ -1,3 +1,7 @@
+# INF601 - Advanced Programming with Python
+# Brayan Gomez
+# Mini project 3
+
 import os
 
 from flask import Flask
