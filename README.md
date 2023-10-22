@@ -12,7 +12,11 @@ Please run the following:
 pip install -r requirements.txt
 ```
 ## How to run
-In a terminal window, please type the following:
+To initialize the sqlite database, please type the following in the terminal:
 ```
-python hello.py
+flask --app flaskr init-db
+```
+In a terminal window, please type the following to start a local flask server:
+```
+flask --app flaskr run
 ```
