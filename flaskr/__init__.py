@@ -47,5 +47,8 @@ def create_app(test_config=None):
     from . import blog
     app.register_blueprint(blog.bp)
 
+    from . import guide
+    app.register_blueprint(guide.bp)
+
 
     return app

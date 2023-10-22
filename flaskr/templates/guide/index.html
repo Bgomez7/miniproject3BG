@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Guides{% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('guide.create') }}">New</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% for guide in guides %}
+    <article class="post">
+      <header>
+        <div>
+          <h1>{{ guide['title'] }}</h1>
+          <div class="about">by {{ guide['username'] }} on {{ guide['created'].strftime('%Y-%m-%d') }}</div>
+        </div>
+        {% if g.user['id'] == guide['author_id'] %}
+          <a class="action" href="{{ url_for('guide.update', id=guide['id']) }}">Edit</a>
+        {% endif %}
+      </header>
+      <p class="body">{{ guide['body'] }}</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}

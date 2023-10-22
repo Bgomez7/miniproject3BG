@@ -36,7 +36,7 @@ def register():
                 error = f"User {username} is already registered."
             else:
                 # No errors, send user to login page
-                return redirect(url_for("blog.index"))
+                return redirect(url_for("auth.login"))
 
         flash(error)
 
