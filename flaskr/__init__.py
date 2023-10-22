@@ -50,5 +50,8 @@ def create_app(test_config=None):
     from . import guide
     app.register_blueprint(guide.bp)
 
+    from . import offtopic
+    app.register_blueprint(offtopic.bp)
+
 
     return app

@@ -10,8 +10,9 @@
     {% else %}
       <li><a href="{{ url_for('auth.login') }}">Log In</a>
     {% endif %}
-    <li><a href="https://www.minecraftforum.net/">Official Minecraft Forums</a></li>
+    <li><a href="{{ url_for('blog.index')}}">Posts</a></li>
     <li><a href="{{ url_for('guide.index')}}">Guides</a></li>
+    <li><a href="{{ url_for('offtopic.index')}}">Off Topic Discussion</a></li>
   </ul>
 </nav>
 <section class="content">
